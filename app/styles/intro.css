@@ -1,0 +1,84 @@
+.intro-screen .famous-surface {
+	display: table;
+	-webkit-transition: opacity ease 300ms;
+}
+
+.intro-screen .fa-surface {	
+	color: #fff;
+	font-family: 'TitlingGothicFBCompMedium';
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.intro-screen .begin-view-surface {
+	background: red;	
+}
+
+.intro-screen .begin-view-surface .fa-surface {	
+	margin-top: 200px;
+	width: 50%;
+}
+
+/*.intro-screen .fa-surface h1 { 
+	margin: 0; 
+	font-size: 4rem;
+	line-height: 1;
+}*/
+.intro-screen .fa-surface .logo {
+	height: 150px;
+	width: 150px;
+	margin-bottom: 10px;
+	background: white;
+}
+.intro-screen .fa-surface div > span {	
+	display: block;
+	color: red;
+	font-size: 3.1rem;
+	line-height: 1;
+}
+
+.intro-screen .fa-surface article {
+	height: 100px;
+	color: #000;	
+}
+
+.intro-screen .surface-skip {
+	background: rgba(141, 29, 29, .75);
+	height: 100px !important;	
+}
+
+.intro-screen .article-page .fa-surface { 
+	color: #000;
+	background: yellow; 
+}
+
+.intro-screen .intro-dashboard {	
+	background: white;
+}
+.intro-screen .top-bar { color: #000; }
+.intro-screen .intro-dashboard .fa-surface h4 {
+	margin-top: 2.5rem;
+	font-size: 2rem;
+	font-family: 'TitlingGothicFBCompMedium';
+	margin-bottom: 0;
+}
+
+.dashboard-screen {	
+	color: #000;
+	height: 568px;
+	z-index: 10;
+}
+
+.dashboard-screen .fa-surface {
+	height: 100%;
+	
+}
+.dashboard-screen .dash {
+	background: red;
+	height: 95%;
+}
+.dashboard-screen .top-bar {
+	background: yellow;
+	height: 5%;	
+}

@@ -1,0 +1,52 @@
+<div class="intro-screen" ng-controller="IntroCtrl">
+	<fa-app style="width: 320px; height: 568px;">		   
+   		<fa-view id="beginning-slide-screen" fa-pipe-to="eventHandler">
+		   <fa-modifier fa-opacity="page1Opacity.value">
+		   		<fa-surface class="begin-view-surface">
+		   			<!-- <h1>Read This.</h1>
+					<h1>Skip That.</h1> -->
+					<div class="logo"><span>The Daily Beast</span></div>
+					<span>Read This. <br />Skip That.</span>
+				</fa-surface>
+			</fa-modifier>
+		</fa-view>
+		<fa-view id="home-screen" fa-pipe-to="eventHandler">
+			
+			<fa-modifier fa-translate="dashboardTrans.get()" fa-opacity="dashOpacity.value">
+				<fa-surface class="dashboard-screen" fa-click="barTap(this)">
+					<div class="dash">This is a dashboard</div>
+					<div class="top-bar">{{list.length}} stories</div>
+				</fa-surface>
+			</fa-modifier>
+			<fa-modifier ng-repeat="article in articles" fa-translate="article.trans.get()">
+				<fa-modifier fa-opacity="page2Opacity.value" id="{{'article-' + $index}}">
+					<fa-grid-layout fa-options="gridLayoutOptions">				
+				   		<fa-surface class="surface-article" fa-touchmove="touchMove(article, $event)" fa-touchstart="touchStart(article, $event)" fa-touchend="touchEnd(article, $event)">
+				   			<article>
+				   				{{list[article.index].content}}			   				
+				   			</article>
+				   		</fa-surface>			   	
+			   		</fa-grid-layout>
+		   		</fa-modifier>
+	   		</fa-modifier>
+
+	   		<fa-modifier ng-repeat="article in articles" fa-translate="article.skiptrans.get()">
+		   		<fa-modifier fa-opacity="page2Opacity.value">					
+				   		<fa-surface class="surface-skip">   	
+				   			<div class="skip">Skip</div>			   			
+				   		</fa-surface>			   				   		
+		   		</fa-modifier>
+	   		</fa-modifier>
+		</fa-view>
+		<fa-view id="article-screen">
+			<fa-modifier fa-translate="articlePageTrans.get()" fa-opacity="page3Opacity.value">
+				<fa-surface class="article-page">
+					this is my favorite article
+					this is my favorite article
+					this is my favorite article
+					this is my favorite article					
+				</fa-surface>
+			</fa-modifier>
+		</fa-view>	
+	</fa-app>
+</div>
